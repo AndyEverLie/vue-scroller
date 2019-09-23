@@ -423,6 +423,10 @@
         this.scroller.scrollBy(x, y, animate)
       },
 
+      scrollToBottom(animate) {
+	this.scroller.scrollBy(0, this.container.clientHeight, animate)
+      },
+
       touchStart(e) {
         // Don't react if initial down happens on a form element
         if (e.target.tagName.match(/input|textarea|select/i)) {
